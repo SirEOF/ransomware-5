@@ -3,7 +3,7 @@ from os.path import abspath,join
 
 
 extensions = [
-        # 'exe,', 'dll', 'so', 'rpm', 'deb', 'vmlinuz', 'img', 
+         'exe,', 'dll', 'so', 'rpm', 'deb', 'vmlinuz', 'img', 'app',
         'jpg', 'jpeg', 'bmp', 'gif', 'png', 'svg', 'psd', 'raw', # images
         'mp3','mp4', 'm4a', 'aac','ogg','flac', 'wav', 'wma', 'aiff', 'ape', # music and sound
         'avi', 'flv', 'm4v', 'mkv', 'mov', 'mpg', 'mpeg', 'wmv', 'swf', '3gp', # Video and movies
@@ -20,7 +20,7 @@ extensions = [
         'awk', 'sh', 'cgi', 'pl', 'ada', 'swift', # linux/mac based scripts
         'go', 'py', 'pyc', 'bf', 'coffee', # other source code files
 
-        'zip', 'tar', 'tgz', 'bz2', '7z', 'rar', 'bak','app'  # compressed formats
+        'zip', 'tar', 'tgz', 'bz2', '7z', 'rar', 'bak'  # compressed formats
     ]
 
 

